@@ -54,7 +54,9 @@ for i in range(len(account_list)):
 	print("Using account: ", account)
 	d(resourceId="com.hunantv.imgo.activity:id/etContent").set_text(account)
 	d(resourceId="com.hunantv.imgo.activity:id/etContent", text=u"请输入密码").set_text(password)
-	time.sleep(0.5)
+	time.sleep(0.3)
+	d.press("back")
+	time.sleep(0.3)
 	d(resourceId="com.hunantv.imgo.activity:id/btnLogin").click()
 	while (not d(text=u"我的消息").exists):
 		time.sleep(1)
