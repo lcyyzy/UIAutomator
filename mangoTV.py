@@ -62,9 +62,9 @@ for i in range(len(account_list)):
 		time.sleep(1)
 	time.sleep(3)
 	d(resourceId="com.hunantv.imgo.activity:id/tvCheckIn").click()
-	while (not d(description=u"连续签到不断签，拿惊喜豪礼").exists):
+	while (not d(description=u"积分商城").exists):
 		time.sleep(1)
-	print ("账号 ", account, " 签到成功")
+	print (u"账号 ", account, u" 签到成功")
 	d.press("back")
 	if (d(resourceId="com.hunantv.imgo.activity:id/ivLeft").exists):
 		d(resourceId="com.hunantv.imgo.activity:id/ivLeft").click()
@@ -99,13 +99,13 @@ for i in range(len(account_list)):
 				time.sleep(1)
 			elif (d(descriptionContains=u"丁泽仁").exists):
 				d(description=u"确认 ").click()
-				print ("账号 ", account, " 投票成功")
+				print (u"账号 ", account, u" 投票成功")
 				time.sleep(0.5)
 			elif (d(description=u"青春值不够，购买专属礼品卡投更多！").exists):
 				d(description=u"close").click()
 				time.sleep(0.5)
 			else:
-				print("没把票投给丁泽仁，请检查排名输入是否正确，如果正确，速速联系开发者")
+				print(u"没把票投给丁泽仁，请检查排名输入是否正确，如果正确，速速联系开发者")
 		else:
 			while (not d(description="ec4abde2626c11e9a7f2ecf4bbc30ba4").sibling(className="android.view.View").child(description="btn_vote_all").exists):
 				d.swipe(0.700, 0.880, 0.700, 0.660)
@@ -121,13 +121,13 @@ for i in range(len(account_list)):
 				time.sleep(0.5)
 			elif (d(description=u"即将投5票给丁泽仁").exists):
 				d(description=u"确认 ").click()
-				print ("账号 ", account, " 投票成功")
+				print (u"账号 ", account, u" 投票成功")
 				time.sleep(0.5)
 			elif (d(description=u"青春值不够，购买专属礼品卡投更多！").exists):
 				d(description=u"close").click()
 				time.sleep(0.5)
 			else:
-				print("没把票投给丁泽仁，请检查排名输入是否正确，如果正确，速速联系开发者")
+				print(u"没把票投给丁泽仁，请检查排名输入是否正确，如果正确，速速联系开发者")
 		time.sleep(0.5)
 		d.press("back")
 		time.sleep(0.5)
