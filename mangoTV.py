@@ -62,10 +62,12 @@ for i in range(len(account_list)):
 		time.sleep(1)
 	time.sleep(3)
 	d(resourceId="com.hunantv.imgo.activity:id/tvCheckIn").click()
-	while (not d(description=u"积分商城").exists):
-		time.sleep(1)
-	print (u"账号 ", account, u" 签到成功")
+	time.sleep(3)
 	d.press("back")
+	# while (not d(description=u"积分商城").exists):
+	# 	time.sleep(1)
+	print (u"账号 ", account, u" 签到成功")
+	# d.press("back")
 	if (d(resourceId="com.hunantv.imgo.activity:id/ivLeft").exists):
 		d(resourceId="com.hunantv.imgo.activity:id/ivLeft").click()
 	time.sleep(1)
